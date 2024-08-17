@@ -28,7 +28,7 @@ public class EmprestimoController {
 	public ResponseEntity<List<EmprestimoDTO>> findAll(){
 		return ResponseEntity.ok(this.service.findAll());
 	}
-	//@Valid
+	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<EmprestimoDTO> save(@RequestBody EmprestimoDTO dto) {
 		return ResponseEntity.ok(this.service.save(dto));
